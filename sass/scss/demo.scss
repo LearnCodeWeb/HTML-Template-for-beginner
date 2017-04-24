@@ -1,0 +1,271 @@
+
+/******************************************************************
+THIS IS JUST DEMO CSS USED BY THE EXAMPLES
+- For the actual shadow css open shadows.css
+******************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************************************************
+IMPORT COMPASS
+- If you don't have Compass you can create your own mixins
+for CSS3 or use bourbon etc.
+******************************************************************/
+@import "compass/css3";
+
+/******************************************************************
+MIXINS
+******************************************************************/
+@mixin breakpoint($point) {
+	@if $point == s {
+		@media (min-width: 320px) { @content; }
+	}
+
+	@else if $point == m {
+		@media (min-width: 800px) { @content; }
+	}
+
+	@else if $point == l {
+		@media (min-width: 1400px) { @content; }
+	}
+
+	@else if $point == xl {
+		@media (min-width: 1500px) { @content; }
+	}
+}
+
+@mixin clearfix() {
+	*zoom: 1;
+	&:before, &:after { display: table; content: ''; }
+	&:after { clear: both; }
+}
+
+/******************************************************************
+STYLING
+******************************************************************/
+* { margin: 0; padding: 0; @include box-sizing(border-box); }
+
+body {
+	background: #eee;
+	font: 14px/1.25 'Helvetica Neue', sans-serif;
+	color: #444;
+
+	@include breakpoint(xl) { font-size: 17px; }
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	color: #222;
+	line-height: 1em;
+	margin-bottom: .5em;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	&.emboss {
+		text-shadow: 0 1px 2px white;
+	}
+}
+
+h1 {
+	font-size: 3em;
+	max-width: 80%;
+	word-break: hyphenate;
+}
+
+a { 
+	color: #0088cc; 
+	text-decoration: none;
+
+	@include transition(color .15s ease-out);
+	&:hover, &:focus { text-decoration: underline; }
+	&:active { color: #005580; }
+}
+
+p { margin: 0 0 1em; }
+
+#container {
+	width: 80%;
+	margin: 4% auto 10%;
+	max-width: 1380px;
+}
+
+footer { 
+	margin-top: 3em; text-align: center; 
+}
+
+#main {
+	margin-top: 1.5em;
+	@include clearfix;
+
+	// Animation
+	@include experimental(animation-fill-mode, both);
+	@include experimental(animation-duration, 1s);
+	@include experimental(animation-name, bounceInUp);
+	@include experimental(animation-delay, .3s);
+
+	div {
+		padding: 2em .5em;
+		margin: 2em 0;
+
+		background: white;
+		border-radius: .3em;
+		border: thin solid rgba(black, .15);
+		
+		text-align: center;
+
+		@include breakpoint(m) {
+			width: 46%;
+			float: left;
+			margin-left: 8%;
+
+			&:nth-child(odd) { margin-left: 0; }
+		}
+
+		@include breakpoint(l) {
+			width: 28%;
+			
+			&:nth-child(odd) { margin-left: 8%; }
+			&:nth-child(3n+1) { margin-left: 0; }
+		}
+
+		p { margin-bottom: .3em; }
+
+		&:hover {
+			p { opacity: 1; }
+
+			code {
+
+				span { @include transition(color .15s ease-out); }
+				.function { color: #940252; }
+				.mixin { color: #669931; }
+				.args { color: #0077aa; }
+			}
+		}
+	}
+}
+
+code {
+	font: 0.9em/0.8 Monaco, "Liberation Mono", Courier, monospace;
+	color: #bbb;
+}
+
+/******************************************************************
+ANIMATION STYLES
+******************************************************************/
+
+@-webkit-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(-30px);
+	}
+	
+	80% {
+		-webkit-transform: translateY(10px);
+	}
+	
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+@-moz-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-moz-transform: translateY(-30px);
+	}
+	
+	80% {
+		-moz-transform: translateY(10px);
+	}
+	
+	100% {
+		-moz-transform: translateY(0);
+	}
+}
+
+@-o-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-o-transform: translateY(-30px);
+	}
+	
+	80% {
+		-o-transform: translateY(10px);
+	}
+	
+	100% {
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		transform: translateY(-30px);
+	}
+	
+	80% {
+		transform: translateY(10px);
+	}
+	
+	100% {
+		transform: translateY(0);
+	}
+}

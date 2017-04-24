@@ -1,0 +1,132 @@
+/******************************************************************
+THIS IS JUST portfolio CSS USED BY THE EXAMPLES
+- For the actual shadow css open shadows.css
+******************************************************************/
+/*****************************************************************
+IMPORT COMPASS
+- If you don't have Compass you can create your own mixins
+for CSS3 or use bourbon etc.
+******************************************************************/
+/******************************************************************
+MIXINS
+******************************************************************/
+/******************************************************************
+STYLING
+******************************************************************/
+/* line 85, ../scss/demo.scss */
+/* { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 87, ../scss/demo.scss */
+/*body { background: #eee; font: 14px/1.25 "Helvetica Neue", sans-serif; color: #444; }*/
+/*@media (min-width: 1500px) { /* line 87, ../scss/demo.scss *
+  body { font-size: 17px; } }
+
+/* line 95, ../scss/demo.scss *
+h1, h2, h3, h4, h5, h6 { color: #222; line-height: 1em; margin-bottom: .5em; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+/* line 102, ../scss/demo.scss *
+h1.emboss, h2.emboss, h3.emboss, h4.emboss, h5.emboss, h6.emboss { text-shadow: 0 1px 2px white; }
+
+/* line 107, ../scss/demo.scss *
+h1 { font-size: 3em; max-width: 80%; word-break: hyphenate; }
+
+/* line 113, ../scss/demo.scss *
+a { color: #0088cc; text-decoration: none; -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
+/* line 118, ../scss/demo.scss *
+a:hover, a:focus { text-decoration: underline; }
+/* line 119, ../scss/demo.scss *
+a:active { color: #005580; }
+
+/* line 122, ../scss/demo.scss *
+p { margin: 0 0 1em; }
+
+/* line 124, ../scss/demo.scss *
+#container { width: 80%; margin: 4% auto 10%; max-width: 1380px; }
+
+/* line 130, ../scss/demo.scss *
+footer { margin-top: 3em; text-align: center; }
+*/
+/* line 134, ../scss/demo.scss main use to create jump effect in portfolio */
+#main 
+{
+	margin-top: 1.5em;
+	*zoom: 1;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-name: bounceInUp;
+	-moz-animation-name: bounceInUp;
+	-ms-animation-name: bounceInUp;
+	-o-animation-name: bounceInUp;
+	animation-name: bounceInUp;
+	-webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+	-ms-animation-delay: 0.3s;
+	-o-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+/* line 78, ../scss/demo.scss */
+#main:before, #main:after { display: table; content: ''; }
+/* line 79, ../scss/demo.scss */
+#main:after { clear: both; }
+
+/* line 169, ../scss/demo.scss */
+#main div p { margin-bottom: .3em; }
+/* line 172, ../scss/demo.scss */
+#main div:hover p { opacity: 1; }
+/* line 176, ../scss/demo.scss */
+#main div:hover code span { -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
+/* line 177, ../scss/demo.scss */
+#main div:hover code .function { color: #940252; }
+/* line 178, ../scss/demo.scss */
+#main div:hover code .mixin { color: #669931; }
+/* line 179, ../scss/demo.scss */
+#main div:hover code .args { color: #0077aa; }
+
+/* line 185, ../scss/demo.scss */
+code { font: 0.9em/0.8 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; }
+
+/******************************************************************
+ANIMATION STYLES
+******************************************************************/
+@-webkit-keyframes bounceInUp { /* line 195, ../scss/demo.scss */
+  0% { opacity: 0; -webkit-transform: translateY(2000px); }
+  /* line 200, ../scss/demo.scss */
+  60% { opacity: 1; -webkit-transform: translateY(-30px); }
+  /* line 205, ../scss/demo.scss */
+  80% { -webkit-transform: translateY(10px); }
+  /* line 209, ../scss/demo.scss */
+  100% { -webkit-transform: translateY(0); } }
+
+@-moz-keyframes bounceInUp { /* line 214, ../scss/demo.scss */
+  0% { opacity: 0; -moz-transform: translateY(2000px); }
+  /* line 219, ../scss/demo.scss */
+  60% { opacity: 1; -moz-transform: translateY(-30px); }
+  /* line 224, ../scss/demo.scss */
+  80% { -moz-transform: translateY(10px); }
+  /* line 228, ../scss/demo.scss */
+  100% { -moz-transform: translateY(0); } }
+
+@-o-keyframes bounceInUp { /* line 234, ../scss/demo.scss */
+  0% { opacity: 0; -o-transform: translateY(2000px); }
+  /* line 239, ../scss/demo.scss */
+  60% { opacity: 1; -o-transform: translateY(-30px); }
+  /* line 244, ../scss/demo.scss */
+  80% { -o-transform: translateY(10px); }
+  /* line 248, ../scss/demo.scss */
+  100% { -o-transform: translateY(0); } }
+
+@keyframes bounceInUp { /* line 254, ../scss/demo.scss */
+  0% { opacity: 0; transform: translateY(2000px); }
+  /* line 259, ../scss/demo.scss */
+  60% { opacity: 1; transform: translateY(-30px); }
+  /* line 264, ../scss/demo.scss */
+  80% { transform: translateY(10px); }
+  /* line 268, ../scss/demo.scss */
+  100% { transform: translateY(0); } }

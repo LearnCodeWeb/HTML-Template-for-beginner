@@ -1,19 +1,31 @@
 {
-    "name": "mianzaid/html-template-free",
+    "name": "learncodeweb/html-template-for-beginner",
     "description": "HTML Template For Beginner LCW 1.0",
+    "homepage": "https://learncodeweb.com/demo/bootstrap-framework/free-html-bootstrap-theme/",
     "type": "html-template",
     "keywords": [
         "HTML-Free-Template",
         "BS3",
+        "HTML",
+        "CSS",
+        "Free",
+        "Company Profile",
+        "Portfolio",
         "Responsive",
-        "Learncodeweb"
+        "learncodeweb.com"
     ],
     "minimum-stability": "stable",
     "authors": [
         {
-            "name": "Khalid Zaid Bin",
+            "name": "Khalid Zaid Bin [Mian Zaid]",
             "email": "zaid@learncodeweb.com"
         }
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/LearnCodeWeb/HTML-Template-for-beginner/issues"
+    },
+    "require": {
+        "composer/installers": "1.*"
+    }
 }

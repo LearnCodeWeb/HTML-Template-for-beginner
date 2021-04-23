@@ -3,10 +3,12 @@
     "description": "HTML Template For Beginner LCW 1.0",
     "type": "html-template",
     "keywords": [
-        "parallel",
-        "install",
-        "speedup"
+        "HTML-Free-Template",
+        "BS3",
+        "Responsive",
+        "Learncodeweb"
     ],
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Khalid Zaid Bin",

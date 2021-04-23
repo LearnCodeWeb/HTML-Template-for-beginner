@@ -1,0 +1,17 @@
+{
+    "name": "mianzaid/html-template-free",
+    "description": "HTML Template For Beginner LCW 1.0",
+    "type": "html-template",
+    "keywords": [
+        "parallel",
+        "install",
+        "speedup"
+    ],
+    "authors": [
+        {
+            "name": "Khalid Zaid Bin",
+            "email": "zaid@learncodeweb.com"
+        }
+    ],
+    "license": "MIT"
+}

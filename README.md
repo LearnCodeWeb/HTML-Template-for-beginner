@@ -3,7 +3,7 @@ Bootstrap base HTML theme for beginner.
 
 Install with composer
 
-`composer require mianzaid/html-template-free`
+`composer require learncodeweb/html-template-for-beginner`
 
 <a href="https://learncodeweb.com/demo/bootstrap-framework/free-html-bootstrap-theme/" target="_blank">View Online</a>
 
